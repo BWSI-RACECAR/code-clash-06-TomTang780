@@ -34,18 +34,14 @@ class Solution:
         # return type: int
         
         # TODO: Write code below to return an int with the solution to the prompt
+        diff = checkpoints[1] - checkpoints[0]
         for i in range(len(checkpoints)):
             for j in range(i + 1, len(checkpoints)):
                 if checkpoints[i] > checkpoints[j]:
                     checkpoints[i], checkpoints[j] = checkpoints[j], checkpoints[i]
-        diff = checkpoints[1] - checkpoints[0]
-        for i in range(len(checkpoints)):
-            for j in range(i + 1, len(checkpoints)):
                 if(checkpoints[j] - checkpoints[i] > diff): 
                     diff = checkpoints[j] - checkpoints[i]
-      
         return diff
-
 
         pass
 
