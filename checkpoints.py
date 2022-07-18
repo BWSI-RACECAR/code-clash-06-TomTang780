@@ -41,8 +41,8 @@ class Solution:
         diff = checkpoints[1] - checkpoints[0]
         for i in range(len(checkpoints)):
             for j in range(i + 1, len(checkpoints)):
-                if(checkpoints[j] - checkpoints[i] > max_diff): 
-                    max_diff = checkpoints[j] - checkpoints[i]
+                if(checkpoints[j] - checkpoints[i] > diff): 
+                    diff = checkpoints[j] - checkpoints[i]
       
         return diff
 
